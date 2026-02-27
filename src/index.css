@@ -1,0 +1,313 @@
+/* ================= RESET Y CONTENEDOR ================= */
+
+/* html, body y #root ocupan toda la pantalla */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+/* Contenedor principal de la app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Main crece para empujar el footer */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  color: white;
+}
+
+.logo-left {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ================= CONNECT BUTTON ================= */
+
+.connect-btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón principal */
+.connect-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #e0e0e0;       
+  cursor: pointer;
+  min-width: 150px;
+  transition: background 0.2s ease, transform 0.05s ease, box-shadow 0.2s ease;
+}
+
+.connect-btn:hover {
+  background-color: #c2c2c2; 
+}
+
+.connect-btn:active {
+  transform: scale(0.98);
+}
+
+.connect-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Dropdown del menú */
+.connect-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+/* Botones dentro del dropdown */
+.connect-menu button {
+  padding: 10px 16px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 6px;
+}
+
+.connect-menu button:hover {
+  background: #f5f5f5;
+}
+
+.connect-menu button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* ================= FORM =================== */
+
+.generated-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.generated-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.generated-form input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.generated-form input:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.15);
+}
+
+.generated-form input:disabled {
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+/* Manager address box */
+.generated-form .manager-box {
+  padding: 12px 16px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.generated-form .manager-box .manager-text {
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.generated-form .manager-box .manager-close-btn {
+  width: 100%;
+  border: 1px solid #ccc;
+  color: #000;
+  border-radius: 6px;
+  background: #e0e0e0;   
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.generated-form .manager-box .manager-close-btn:focus {
+  outline: none;
+}
+
+.generated-form .manager-box .manager-close-btn:hover {
+  background-color: #c2c2c2;
+}
+
+.generated-form .manager-box .manager-close-btn:active {
+  transform: scale(0.98);
+}
+
+/* Error box */
+.generated-form .error-box {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #2b0000;
+  border: 1px solid #ff4d4f;
+  color: #ff4d4f;
+  font-size: 14px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.error-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.error-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: inherit;
+}
+
+.error-message {
+  word-break: break-word; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Validaciones de inputs */
+.generated-form .error {
+  font-weight: normal;
+  color: #d93025;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* ================= FORM BUTTON ================= */
+
+.generated-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: #0070f3;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.05s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.generated-form button:focus {
+  outline: none;
+}
+
+.generated-form button:hover:not(:disabled) {
+  background-color: #005bb5;
+}
+
+.generated-form button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.generated-form button:disabled {
+  background-color: #c2c2c2;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.generated-form .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ==================FOOTER======================= */
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ccc;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-top: auto;
+  background-color: #f9f9f9;
+}
+
+.footer div:first-child {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .generated-form {
+    margin: 1rem;
+  }
+}

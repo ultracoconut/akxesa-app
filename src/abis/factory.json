@@ -1,0 +1,168 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "manager",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			}
+		],
+		"name": "ManagerCreated",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_DEFAULT_DURATION",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_MODIFICATIONS",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_SECUNDARY_ACCOUNTS",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_SUBSCRIPTIONS",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "defaultDuration",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxSecundaryAccounts",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxModifications",
+				"type": "uint256"
+			}
+		],
+		"name": "createSubscriptionManager",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "managerAddress",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getManager",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "manager",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "managers",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "manager",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalManagers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
