@@ -2,7 +2,7 @@ import { decodeEventLog } from 'viem'
 import type { PublicClient, WalletClient } from 'viem'
 import ABIJson from '../abis/factory.json'
 
-const CONTRACT_ADDRESS = '0x83448DC5A6Ac6975204B0409D3374F0F65f716B9'
+const CONTRACT_ADDRESS = '0xDa432efB6c6357Cb7f6146697BD57F96049cE5D8'
 
 type AbiItem = {
   anonymous?: boolean
