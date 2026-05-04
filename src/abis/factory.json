@@ -20,7 +20,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "MAX_DEFAULT_DURATION",
+		"name": "MAX_DURATION",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -46,7 +46,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "MAX_SECUNDARY_ACCOUNTS",
+		"name": "MAX_SECONDARY_ACCOUNTS",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -84,7 +84,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "maxSecundaryAccounts",
+				"name": "maxSecondaryAccounts",
 				"type": "uint256"
 			},
 			{
