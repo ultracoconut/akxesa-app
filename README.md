@@ -1,4 +1,4 @@
-# Akxesa Manager App
+# Akxesa App
 
 React + TypeScript application to **create Akxesa Subscription
 Managers**.
@@ -33,7 +33,7 @@ copied or used for further interactions.
 1.  Clone the repository:
 
 ``` bash
-git clone https://github.com/ultracoconut/akxesa-manager.git
+git clone https://github.com/ultracoconut/akxesa-app.git
 ```
 
 2.  Enter the project folder:
