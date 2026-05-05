@@ -39,7 +39,7 @@ git clone https://github.com/ultracoconut/akxesa-app.git
 2.  Enter the project folder:
 
 ``` bash
-cd akxesa-manager
+cd akxesa-app
 ```
 
 3.  Install dependencies:
